@@ -1,0 +1,31 @@
+.g-ghost {
+  width: 100px;
+  height: 20px;
+  margin: 10px 15px;
+  background-color: $c-gray1;
+
+  &-bg {
+    &--strong {
+      background-color: $c-gray5;
+    }
+
+    &--light {
+      background-color: $c-gray4;
+    }
+  }
+
+  &-lg {
+    width: 200px;
+    height: 15px;
+  }
+
+  &-md {
+    width: 160px;
+  }
+
+  &-box {
+    width: 65px;
+    height: 65px;
+    margin: 0 10px 10px;
+  }
+}

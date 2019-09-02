@@ -17,7 +17,39 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@mxc-shared": [ "projects/shared/src"],
+      "@mxc-shared/*": ["projects/shared/src/*"],
+      "@mxc-ui": ["projects/ui/src"],
+      "@mxc-ui/*": ["projects/ui/src/*"],
+      //@mxc
+      "@mxc/environment": ["src/environments/environment.ts"],
+      "@mxc/endpoints": ["src/providers/endpoints"],
+      "@mxc/endpoints/*": ["src/providers/endpoints/*"],
+      "@mxc/guards": ["src/providers/guards"],
+      "@mxc/guards/*": ["src/providers/guards/*"],
+      "@mxc/interceptors": ["src/providers/interceptors"],
+      "@mxc/interceptors/*": ["src/providers/interceptors/*"],
+      "@mxc/resolve": ["src/providers/resolve"],
+      "@mxc/resolve/*": ["src/providers/resolve/*"],
+      "@mxc/services": ["src/providers/services"],
+      "@mxc/services/*": ["src/providers/services/*"],
+      "@mxc/statemanagement": ["src/statemanagement"],
+      "@mxc/statemanagement/*": ["src/statemanagement/*"],
+      "@mxc/settings": ["src/settings"],
+      "@mxc/settings/*": ["src/settings/*"],
+      "@mxc/pages": ["src/main/pages"],
+      "@mxc/pages/*": ["src/main/pages/*"],
+      "@mxc/layouts": ["src/main/layouts"],
+      "@mxc/layouts/*": [ "src/main/layouts" ],
+      "@mxc/components": ["src/main/components"],
+      "@mxc/components/*": ["src/main/components/*"],
+      "@mxc/views/*": ["src/main/views/*"],
+      "@mxc/routes": ["src/routes"],
+      "@mxc/state": ["src/state"],
+      "@mxc/state/*": ["src/state/*"]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

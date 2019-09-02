@@ -1,0 +1,27 @@
+<form [formGroup]="form" class="container bg-gray2 py-5 my-4 shadow-sm">
+  <div class="d-flex flex-wrap justify-content-center">
+    <div class="mt-md-5 mr-md-4 mb-2 w-sm-90 w-md-30 w-410">
+      <mxc-input-currency
+        placeholder="USD"
+        min="0"
+        formControlName="amount"
+        [isoCode]="isoCodeBase"
+        [error]="amount.invalid">
+      </mxc-input-currency>
+    </div>
+    <div class="mt-md-5 w-md-90 w-sm-90 w-md-30 w-410">
+      <input
+        type="text"
+        class="form-control text-center"
+        placeholder="EU"
+        readonly
+        [value]="calculateData?.total | currency:calculateData.toCurrency:'symbol':'.2-4'">
+    </div>
+  </div>
+  <div class="text-center mt-4">
+    <button
+      (click)="calculate()"
+      type="button"
+      class="btn btn-secondary btn-lg text-white text-uppercase px-5">Calculate</button>
+  </div>
+</form>

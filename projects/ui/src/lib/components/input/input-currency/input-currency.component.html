@@ -1,0 +1,10 @@
+<input class="g-input form-control text-center"
+    type="tel"
+    [(ngModel)]="value"
+    [mxcNumber]="true"
+    [ngClass]="{'is-invalid': error}"
+    [attr.placeholder]="placeholder"
+    [disabled]="disabled"
+    (focus)="onFocusInput($event)"
+    (blur)="onBlurInput($event)"
+    (change)="onChangeInput($event)">
