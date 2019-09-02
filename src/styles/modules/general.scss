@@ -17,3 +17,13 @@
     width: 30%;
   }
 }
+
+.g-layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.g-main {
+  flex: 1;
+}

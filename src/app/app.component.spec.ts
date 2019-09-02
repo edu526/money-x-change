@@ -1,4 +1,11 @@
+import { HttpClientModule } from '@angular/common/http';
 import { async, TestBed } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { ApiModule } from '@mxc-shared/public-api';
+import { AuthenticationModule } from '@mxc/interceptors/authentication';
+import { MainLayoutModule } from '@mxc/layouts';
+import { RoutesModule } from '@mxc/routes';
+import { StateModule } from '@mxc/state/state.module';
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -6,6 +13,15 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        BrowserModule,
+        RoutesModule,
+        HttpClientModule,
+        MainLayoutModule,
+        ApiModule,
+        AuthenticationModule,
+        StateModule
       ]
     })
       .compileComponents();
@@ -18,18 +34,4 @@ describe('AppComponent', () => {
       .toBeTruthy();
   });
 
-  it(`should have as title 'moneyxchange'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title)
-      .toEqual('moneyxchange');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent)
-      .toContain('moneyxchange app is running!');
-  });
 });
