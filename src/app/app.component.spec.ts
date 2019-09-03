@@ -1,3 +1,4 @@
+import { APP_BASE_HREF } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { async, TestBed } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
@@ -22,6 +23,9 @@ describe('AppComponent', () => {
         ApiModule,
         AuthenticationModule,
         StateModule
+      ],
+      providers: [
+        { provide: APP_BASE_HREF, useValue: '/' }
       ]
     })
       .compileComponents();

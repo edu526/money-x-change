@@ -3,7 +3,6 @@
     <div class="mt-md-5 mr-md-4 mb-2 w-sm-90 w-md-30 w-410">
       <mxc-input-currency
         placeholder="USD"
-        min="0"
         formControlName="amount"
         [isoCode]="isoCodeBase"
         [error]="amount.invalid">
@@ -11,6 +10,7 @@
     </div>
     <div class="mt-md-5 w-md-90 w-sm-90 w-md-30 w-410">
       <input
+        id="result"
         type="text"
         class="form-control text-center"
         placeholder="EU"

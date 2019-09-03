@@ -13,7 +13,7 @@ export class FixerService {
     private apiService: ApiService
   ) { }
 
-  getBase(base: IsoCodeCurrency, symbols: Array<IsoCodeCurrency> = []): Observable<IFixer> {
+  getBase(base?: IsoCodeCurrency, symbols: Array<IsoCodeCurrency> = []): Observable<IFixer> {
     return this.apiService.get(FixerEndpoint.baseFixer, { params: { base: base || '', symbols: symbols.join(',') } });
   }
 

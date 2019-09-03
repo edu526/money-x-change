@@ -10,7 +10,6 @@ import { ICalculate, ICalculateRequest } from '@mxc/statemanagement/models/calcu
 import { IFixer, IFixerRequest } from '@mxc/statemanagement/models/fixer.interface';
 import { interval } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
-// import { IsoCodeCurrency } from '@mxc/statemanagement/enums/currency.enum';
 
 @Component({
   selector: 'mxc-home',
@@ -26,10 +25,10 @@ export class HomeComponent extends UnsubscribeOnDestroy implements OnInit {
   isoCodeBase = environment.from_currency;
 
   constructor(
-    private fixerFacade: FixerFacade,
-    private calculateFacade: CalculateFacade,
-    private fb: FormBuilder,
-    private clearCurrency: ClearCurrencyPipe
+    public fixerFacade: FixerFacade,
+    public calculateFacade: CalculateFacade,
+    public fb: FormBuilder,
+    public clearCurrency: ClearCurrencyPipe
   ) {
     super();
   }
